@@ -20,7 +20,7 @@ public class ExtraClaseSemana2 {
         // TODO code application logic here
         byte antiguedad;
         byte HoraSemanales;
-        float salarioHora;
+        double salarioHora;
         double salarioBruto;
         double salarioNeto;
         
@@ -28,8 +28,8 @@ public class ExtraClaseSemana2 {
                 + "antiguedad en años en la empresa"));
         HoraSemanales  = Byte.parseByte(JOptionPane.showInputDialog("Digite "
                 + "la cantidad de horas laboradas por semana"));
-        salarioHora  = Byte.parseByte(JOptionPane.showInputDialog("Digite su"
-                + " salario por hora"));
+        salarioHora  = Integer.parseInt(JOptionPane.showInputDialog("Digite"
+                + " su salario por hora"));
         
         salarioBruto = (HoraSemanales*salarioHora);
         
