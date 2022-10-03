@@ -19,7 +19,7 @@ public class ExtraClaseSemana2 {
     public static void main(String[] args) {
         // TODO code application logic here
         byte antiguedad;
-        byte HoraSemanales;
+        int HoraSemanales;
         double salarioHora;
         double salarioBruto;
         double salarioNeto;
@@ -31,11 +31,11 @@ public class ExtraClaseSemana2 {
         salarioHora  = Integer.parseInt(JOptionPane.showInputDialog("Digite"
                 + " su salario por hora"));
         
-        salarioBruto = (HoraSemanales*salarioHora);
+        salarioBruto = (HoraSemanales*salarioHora*4);
         
         if(antiguedad>=10){
             salarioBruto = salarioBruto + (salarioBruto*0.20);
-            if(salarioBruto>=1000){
+            if(salarioBruto>=1000 && salarioBruto<2000){
                 salarioNeto = salarioBruto - (salarioBruto*0.10);
                 JOptionPane.showMessageDialog(null,"Su salario neto"
                         + " es: " + salarioNeto);
@@ -45,6 +45,11 @@ public class ExtraClaseSemana2 {
                 JOptionPane.showMessageDialog(null,"Su salario neto"
                         + " es: " + salarioNeto);
             }
+            else if (salarioBruto<1000) {
+            
+             JOptionPane.showMessageDialog(null,"su salario es: "
+                     + salarioBruto);
+        }
         }
         
         else {
